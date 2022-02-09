@@ -66,6 +66,7 @@ function validateGuess(guess) {
 }
 
 validateGuess("grohe");
+validateGuess("noerw");
 
 
 //displaying result of guess

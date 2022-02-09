@@ -1,0 +1,36 @@
+
+
+body {
+    margin: 10% 30%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.guessRow {
+    display: grid;
+    grid-template-columns: repeat(5, 10vmin);
+    gap: 1vmin;
+    margin-bottom: 1vmin;
+}
+.letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vmin;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.grey {
+    background-color: grey;
+
+}
+
+.green {
+    background-color: greenyellow;
+
+}
+
+.yellow {
+    background-color: gold;
+}
+
