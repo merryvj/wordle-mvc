@@ -1,13 +1,15 @@
 const word = "graph"; //replace this with API call
 let dictionary = [ //replace this as well!
-    "bagle",
-    "switch",
-    "gross",
-    "crater",
-    "frame"
+    "bagel",
+    "earth",
+    "shelf",
+    "field",
+    "frame",
+    "amaze"
 ]
 let guessesLeft = 6;
 
+const instructions = document.querySelector("#instructions");
 const input = document.querySelector("#input");
 const feedbackEl = document.querySelector("#feedback");
 
@@ -22,11 +24,14 @@ function getWord() {
 }
 //submitting a guess - client input, check if in dictionary
 function submitGuess() {
-    let guess = input.value();
+    let guess = input.value;
+    console.log(guess);
 
     if (dictionary.includes(guess)) {
         validateGuess(guess);
         guessesLeft--;
+        instructions.innerHTML = `You have ${guessesLeft} guesses left`;
+        input.value = '';
     } else {
         alert("Please enter a valid 5-letter word.");
     }
@@ -65,14 +70,11 @@ function validateGuess(guess) {
     showGuessResults();
 }
 
-validateGuess("grohe");
-validateGuess("noerw");
 
 
 //displaying result of guess
 function showGuessResults() {
-
-
+    feedbackEl.innerHTML = '';
     for (let guess of guesses) {
         let guessRow = document.createElement("div");
         guessRow.classList.add("guessRow");

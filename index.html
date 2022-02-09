@@ -8,10 +8,15 @@
 
 </head>
 <body>
-    <input type="text" id="input"></input>
-    <button id="enterBtn" onclick="submitGuess()">Enter</button>
-    <div id="feedback">
+    <div class="wrapper">
+        <p id="instructions">You have 6 guesses left</p>
+        <div class="input-wrapper">
+            <input type="text" id="input"></input>
+            <button id="enterBtn" onclick="submitGuess()">Enter</button>
+        </div>
+        <div id="feedback">
 
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
