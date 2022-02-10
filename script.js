@@ -1,3 +1,21 @@
+
+class Model {
+    constructor() {}
+}
+
+class View {
+    constructor() {}
+}
+
+class Controller {
+    constructor(model, view) {
+        this.model = model
+        this.view = view
+    }
+}
+
+const app = new Controller(new Model(), new View());
+
 const word = "graph"; //replace this with API call
 let dictionary = [ //replace this as well!
     "bagel",
@@ -39,12 +57,6 @@ function submitGuess() {
 
 //validating guess compared to word of day
 function validateGuess(guess) {
-    //for each character of guess
-        //if character is in word
-            //set letter to yellow
-            //if character is also in correct position
-                //set letter to green
-        //else set letter to grey
 
     let guessLetters = [];
 
